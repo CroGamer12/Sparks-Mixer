@@ -1,0 +1,21 @@
+{
+  "name": "SparkMilesoneChannels",
+  "version": "1.0.0",
+  "description": "A web based tool to get the current amount of sparks a channel has and compare two channels.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html -d devBuild/dev --cache-dir devBuild/cache",
+    "build": "parcel build index.html -d devBuild/production --cache-dir devBuild/cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CroGamer12/Sparks-Mixer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CroGamer12/Sparks-Mixer/issues"
+  },
+  "homepage": "https://github.com/CroGamer12/Sparks-Mixer#readme"
+}
