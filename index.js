@@ -6,6 +6,8 @@ const secondChannelValue = document.getElementById('secondChannelValue');
 const search2Btn = document.getElementById('search2Btn');
 const differenceName = document.getElementById('differenceName');
 const difference = document.getElementById('differenceValue');
+let d1;
+let d2;
 
 
 const search1 = () => {
@@ -23,6 +25,7 @@ const search1 = () => {
                     })
                     .then(data1 => {
                         firstChannelValue.innerHTML = data1.patronageEarned;
+                        d1 = data1.patronageEarned;
                     });
             }, 5000);
         });
@@ -44,13 +47,14 @@ const search2 = () => {
                     })
                     .then(data1 => {
                         secondChannelValue.innerHTML = data1.patronageEarned;
+                        d2 = data1.patronageEarned;
                         setInterval(() => {
-                            if (parseInt(firstChannelValue.innerHTML) < parseInt(secondChannelValue.innerHTML)) {
-                                difference.innerHTML = parseInt(firstChannelValue.innerHTML) - parseInt(secondChannelValue.innerHTML);
+                            if (d1 < d2) {
+                                difference.innerHTML = (d2 - d1);
                             } else {
-                                difference.innerHTML = parseInt(secondChannelValue.innerHTML) - parseInt(firstChannelValue.innerHTML);
+                                difference.innerHTML = (d1 - d2);
                             }
-                        });
+                        }, 2500);
                     });
             }, 5000);
         });

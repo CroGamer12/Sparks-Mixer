@@ -4,8 +4,8 @@
   "description": "A web based tool to get the current amount of sparks a channel has and compare two channels.",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html -d devBuild/dev --cache-dir devBuild/cache",
-    "build": "parcel build index.html -d devBuild/production --cache-dir devBuild/cache"
+    "start": "parcel index.html -d ./dist --no-cache",
+    "build": "parcel build index.html -d ./dist/production --no-cache --no-source-maps"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/CroGamer12/Sparks-Mixer/issues"
   },
-  "homepage": "https://github.com/CroGamer12/Sparks-Mixer#readme"
+  "homepage": "https://github.com/CroGamer12/Sparks-Mixer#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
 }
