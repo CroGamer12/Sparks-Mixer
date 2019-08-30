@@ -9,7 +9,6 @@ const difference = document.getElementById('differenceValue');
 let d1;
 let d2;
 
-
 const search1 = () => {
     const input = document.getElementById('channelInput');
     fetch(`https://mixer.com/api/v1/channels/${input.value}?fields=id`)
